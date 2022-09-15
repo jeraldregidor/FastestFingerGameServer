@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.fastestfing.model.User;
 import com.example.fastestfing.service.UserService;
 
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*") 
