@@ -7,5 +7,4 @@ import com.example.fastestfing.model.User;
 public interface UserRepo extends JpaRepository <User,Integer> {
     User findByRanking(String ranking);
     void deleteByRanking(String ranking);
-    void deleteByScore(int score);
 }

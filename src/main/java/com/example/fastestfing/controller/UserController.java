@@ -32,9 +32,3 @@ public class UserController {
         return userService.getRankDetails(challengerForm.getName(), challengerForm.getScore());
     }
 }
-
-@Data
-class challengerForm{
-    private String name;
-    private int score;
-}

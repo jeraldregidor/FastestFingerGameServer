@@ -40,12 +40,9 @@ public class UserServiceImp implements UserService {
         }
 
         {/*This loop will delete rank 11 and above*/}
-        User userRank10 = userRepo.findByRanking("10");
-        int scoreRank10 = userRank10.getScore();
-        userRepo.deleteByRanking("11"); // incase of equal to rank 10
         for (User participant : participants) {
-            if(participant.getScore() < scoreRank10){
-                userRepo.deleteByScore(participant.getScore());
+            if(Integer.parseInt(participant.getRanking()) > 10){
+                userRepo.deleteByRanking(participant.getRanking());
             }
         }
 
